@@ -19,21 +19,20 @@ function checkPalindromo(testo) {
 // Somma due valori
 // Controllo del risultato 
 
-let sceltaGiocatore = prompt('PARI o DISPARI?');
+let sceltaGiocatore = '';
 
-if (sceltaGiocatore === 'PARI' || sceltaGiocatore === 'DISPARI') {
-    console.log(`Hai scelto: ${sceltaGiocatore}`)
+while (sceltaGiocatore !== 'PARI' && sceltaGiocatore !== 'DISPARI') {
+    sceltaGiocatore = prompt(`PARI o DISPARI?`);
+    
 }
-    else{
-        console.log(`Riprova, inserisci PARI o DISPARI`)
-    }
+console.log(`Hai scelto: ${sceltaGiocatore}`)
 
-let numeroGiocatore = parseInt(prompt('Scegli un numero da 1 a 5'));
-if (isNaN(numeroGiocatore) || numeroGiocatore < 1 || numeroGiocatore > 5) {
-    console.log(`Riprova, inserisci un valore corretto`)
+let numeroGiocatore = '';
+while (isNaN(numeroGiocatore) || numeroGiocatore < 1 || numeroGiocatore > 5) {
+    numeroGiocatore = parseInt(prompt('Scegli un numero da 1 a 5'));
+    console.log(`Riprova, inserisci un valore corretto`);
 }
-    else 
-        console.log(`Hai scelto ${numeroGiocatore}`);
+console.log(`Hai scelto: ${numeroGiocatore}`)
 
 function letsPlay() {
     let numeroPc = Math.floor(Math.random() * 5) + 1;
@@ -42,7 +41,7 @@ function letsPlay() {
 let numeroRandomPc = letsPlay();
 console.log(`PC ha scelto: ${numeroRandomPc}`);
 let somma = (numeroGiocatore) + (numeroRandomPc);
-console.log(somma)
+console.log(`Totale: ${somma}`);
 function checkPariDispari(num) {
     if (num % 2 === 0) {
         return 'PARI';
