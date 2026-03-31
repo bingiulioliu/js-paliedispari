@@ -9,3 +9,22 @@ function checkPalindromo(testo) {
     let testoInvertito = testoCaps.split('').reverse().join('');
     return testoCaps === testoInvertito
 }
+
+
+// PARI E DISPARI
+// L'utente sceglie pari o dispari
+// L'utente inserisce un numero (eventuale check Number e !=0)
+// Pc genera math floor random *5 in una funzione
+// Somma due valori
+// Controllo del risultato 
+
+let sceltaGiocatore = prompt('PARI o DISPARI?');
+
+if (sceltaGiocatore === 'PARI' || sceltaGiocatore === 'DISPARI') {
+    console.log(`Hai scelto ${sceltaGiocatore}`)
+}
+    else{
+        console.log(`Riprova, inserisci un valore corretto`)
+    }
+
+let numeroGiocatore = prompt('Scegli un numero');
